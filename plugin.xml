@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <id>betterspoilers</id>
+    <name>
+        <lang name="default">Better Spoilers</lang>
+    </name>
+    <author>
+        <lang name="default">shtrih</lang>
+    </author>
+    <homepage>http://4otaku.org</homepage>
+    <version>1.0.0</version>
+    <dirname>better-spoilers</dirname>
+    <requires>
+        <alto>
+            <version>1.1.10</version>
+        </alto>
+        <system>
+            <php>5.3.0</php>
+        </system>
+        <plugins>
+        </plugins>
+    </requires>
+    <description>
+        <lang name="russian">Заменяет тег {alto:hide}Скрытый текст{/alto:hide} на строчный спойлер в топиках и комментариях. Расширяет стандартные спойлеры {alto:spoiler}, добавляя им неограниченную вложенность. Для редактора markItUp! добавляются 2 соответствующие кнопки на панели.</lang>
+    </description>
+</plugin>

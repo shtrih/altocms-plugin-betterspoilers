@@ -1,0 +1,157 @@
+.betterspoiler {
+	padding: 4px 4px 5px 7px;
+	position: relative;
+	border: solid 2px;
+	border-color: #e5e5e5 #d5d5d5 #d5d5d5 #e5e5e5;
+}
+
+.betterspoiler > input + .btrsplr-box > .btrsplr-text {
+	display: none
+}
+
+.betterspoiler > input:checked + .btrsplr-box > .btrsplr-text {
+	display: block;
+	border-top: #ddd 1px dotted;
+}
+
+.betterspoiler > input[type="checkbox"] {
+	width: 100%;
+	height: 20px;
+	cursor: pointer;
+	border: none rgba(0, 0, 0, 0) !important;
+	background: rgba(0, 0, 0, 0) none !important;
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	margin: 0 0 -20px;
+}
+
+.betterspoiler > input + .btrsplr-box > span.btrsplr-trigger span {
+	background: transparent;
+	padding-left: 23px;
+	white-space: nowrap;
+}
+
+.betterspoiler > input + .btrsplr-box > span.btrsplr-trigger {
+	background: left center no-repeat;
+}
+
+.betterspoiler > input + .btrsplr-box > span.btrsplr-trigger {
+	background-image: url('../img/arrow_down.png');
+	display: block
+}
+
+.betterspoiler > input:checked + .btrsplr-box > span.btrsplr-trigger {
+	background-image: url('../img/arrow_up.png');
+}
+
+.betterspoiler > input[type="checkbox"]:focus {
+	outline: none
+}
+
+.betterspoiler .btrsplr-text, .betterspoiler {
+	overflow-x: hidden;
+}
+
+.betterspoiler .btrsplr-text {
+	min-height: 23px;
+	margin: 6px 0 0 0;
+	padding: 4px 4px 5px 7px;
+}
+
+/* Ссылка «закрыть» внизу открытого спойлера */
+.betterspoiler > input ~ a:last-of-type {
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 6px;
+	margin: 0 -8px -5px 0;
+	text-align: center;
+	border-top: #ddd 1px dotted;
+	text-decoration: none;
+	transition: none;
+}
+
+.betterspoiler > input:checked ~ a:last-of-type {
+	display: block;
+}
+
+.betterspoiler > input:checked ~ a:last-of-type:hover {
+	background: #f1f1f1;
+}
+
+.betterspoiler > input ~ a:last-of-type:after,
+.betterspoiler > input ~ a:last-of-type:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	/*pointer-events: none;*/
+}
+
+.betterspoiler > input ~ a:last-of-type:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+.betterspoiler > input ~ a:last-of-type:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-bottom-color: #ddd;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+.betterspoiler > input ~ a:last-of-type:hover:after {
+	border-bottom-color: #f1f1f1;
+}
+
+.no-js .betterspoiler > input:checked ~ a:last-of-type {
+	display: none;
+}
+
+/* строчный спойлер */
+.topic-text .hidetext,
+.comment-preview .hidetext,
+.comment-text .hidetext {
+	background-color: #ccc !important;
+	color: #ccc !important;
+}
+
+.topic-text .hidetext a,
+.comment-preview .hidetext a,
+.comment-text .hidetext a {
+	color: #ccc !important;
+}
+
+.topic-text .hidetext:hover,
+.comment-preview .hidetext:hover,
+.comment-text .hidetext:hover {
+	background-color: inherit !important;
+	color: inherit !important;
+}
+
+.topic-text .hidetext:hover a,
+.comment-preview .hidetext:hover a,
+.comment-text .hidetext:hover a {
+	color: inherit !important;
+}
+
+.topic-text .hidetext:hover a:visited,
+.comment-preview .hidetext:hover a:visited,
+.comment-text .hidetext:hover a:visited {
+	color: #939 !important;
+}
+
+/* Кнопки на панели редактора */
+.markItUp .editor-hidespoiler a {
+	background-image: url(../img/spoiler.png);
+}
+
+.markItUp .editor-hide a {
+	background-image: url(../img/hide.png);
+}
