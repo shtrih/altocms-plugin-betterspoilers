@@ -33,12 +33,11 @@
 }
 
 .betterspoiler > input + .btrsplr-box > span.btrsplr-trigger {
-	background: left center no-repeat;
-}
+	background: url('../img/arrow_down.png') left center no-repeat;
+	display: block;
 
-.betterspoiler > input + .btrsplr-box > span.btrsplr-trigger {
-	background-image: url('../img/arrow_down.png');
-	display: block
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .betterspoiler > input:checked + .btrsplr-box > span.btrsplr-trigger {
