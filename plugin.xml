@@ -12,7 +12,7 @@
     <dirname>better-spoilers</dirname>
     <requires>
         <alto>
-            <version>1.1.10</version>
+            <version>1.1.11</version>
         </alto>
         <system>
             <php>5.3.0</php>
