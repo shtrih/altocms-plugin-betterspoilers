@@ -9,17 +9,12 @@ class PluginBetterspoilers_HookBetterspoilers extends Hook {
      * Регистрация хуков
      */
     public function RegisterHook() {
-        $this->AddHook('template_markitup_before_init', 'markitupBeforeInit');
-        $this->AddHook('template_tinymce_before_init', 'timymceBeforeInit');
+        $this->AddHook('template_editor_before_init', 'editorBeforeInit');
         $this->AddHook('snippet_spoiler', 'snippetSpoiler');
     }
 
-    public function markitupBeforeInit($aParams) {
-        return E::ModuleViewer()->Fetch('markitup_before_init.tpl', $aParams);
-    }
-
-    public function timymceBeforeInit($aParams) {
-        return E::ModuleViewer()->Fetch('tinymce_before_init.tpl', $aParams);
+    public function editorBeforeInit($aParams) {
+        return E::ModuleViewer()->Fetch($aParams['sEditor'] . '_before_init.tpl', $aParams);
     }
 
     public function snippetSpoiler($aParams) {

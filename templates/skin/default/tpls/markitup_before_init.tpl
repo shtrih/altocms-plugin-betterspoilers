@@ -1,3 +1,4 @@
+
 {if $bCommentSettings}
     {$iIndex1 = 4}
     {$iIndex2 = 5}

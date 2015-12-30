@@ -21,7 +21,8 @@
         {else}
             {$bCommentSettings = true}
         {/if}
-        //{hook run="markitup_before_init" bCommentSettings=$bCommentSettings}
+        //{hook run="editor_before_init" bCommentSettings=$bCommentSettings sEditor="markitup"}
+        ls.hook.run('ls_editor_berfore_init', ['markitup', settings, {if $bCommentSettings}true{else}false{/if}]);
 
         // Подключаем редактор
         $('.js-editor-markitup').markItUp(settings);

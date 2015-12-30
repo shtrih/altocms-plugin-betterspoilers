@@ -14,8 +14,8 @@
     {else}
         {$bCommentSettings = true}
     {/if}
-    //{hook run="tinymce_before_init" bCommentSettings=$bCommentSettings}
-
+    //{hook run="editor_before_init" bCommentSettings=$bCommentSettings sEditor="tinymce"}
+    ls.hook.run('ls_editor_berfore_init', ['tinymce', settings, {if $bCommentSettings}true{else}false{/if}]);
 
     if (!tinymce) {
         ls.loadAssetScript('tinymce_4', function(){
